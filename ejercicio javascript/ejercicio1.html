@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Primer Programa JavaScript</title>
+</head>
+<body>
+    <h1>Mi primer script de JavaScript</h1>
+    <p>Presiona F12 y abre la consola para ver los resultados.</p>
+
+    <script>
+
+        console.log("¡Hola Mundo desde la consola!");
+
+      
+        let nombre = "Juan";
+        const edad = 17;
+        var ciudad = "Buenos Aires";
+
+       
+        console.log("Nombre:", nombre);
+        console.log("Edad:", edad);
+        console.log("Ciudad:", ciudad);
+
+     
+        console.log("Hola " + nombre + ", tienes " + edad + " años.");
+
+       
+        console.log(`Hola ${nombre}, tienes ${edad} años y vives en ${ciudad}.`);
+
+        
+        let esEstudiante = true;
+        console.log("¿Es estudiante?", esEstudiante);
+
+        let materias = ["Matemática", "Programación", "Inglés"];
+        console.log("Materias:", materias);
+
+        
+        let persona = {
+            nombre: "Juan",
+            edad: 17,
+            ciudad: "Buenos Aires",
+            estudiante: true
+        };
+
+        console.log("Objeto persona:", persona);
+
+        
+        let personas = [
+            { nombre: "Juan", edad: 17, ciudad: "Buenos Aires" },
+            { nombre: "Ana", edad: 18, ciudad: "Córdoba" },
+            { nombre: "Pedro", edad: 16, ciudad: "Rosario" }
+        ];
+
+        console.table(personas);
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Interacción con JavaScript</title>
+</head>
+<body>
+    <h1>Interacción con JavaScript</h1>
+
+    <button id="miBoton">Haz clic aquí</button>
+    <button id="cambiarTamano">Cambiar tamaño</button>
+    <button id="cambiarFondo">Cambiar fondo</button>
+    <button id="restablecer">Restablecer</button>
+
+    <p id="resultado">Esperando clic...</p>
+    <p id="contador">Cantidad de clics: 0</p>
+
+    <script>
+        const boton = document.getElementById("miBoton");
+        const parrafo = document.getElementById("resultado");
+        const contadorTexto = document.getElementById("contador");
+
+        let clics = 0;
+
+        function contarClic() {
+            clics++;
+            contadorTexto.textContent = "Cantidad de clics: " + clics;
+        }
+
+       
+        boton.addEventListener("click", function() {
+            parrafo.textContent = "¡Has hecho clic en el botón!";
+            parrafo.style.color = "blue";
+            parrafo.style.fontWeight = "bold";
+            contarClic();
+        });
+
+        document.getElementById("cambiarTamano").addEventListener("click", function() {
+            parrafo.style.fontSize = "30px";
+            contarClic();
+        });
+
+       
+        document.getElementById("cambiarFondo").addEventListener("click", function() {
+            parrafo.style.backgroundColor = "yellow";
+            contarClic();
+        });
+
+        document.getElementById("restablecer").addEventListener("click", function() {
+            parrafo.textContent = "Esperando clic...";
+            parrafo.style.color = "";
+            parrafo.style.fontWeight = "";
+            parrafo.style.fontSize = "";
+            parrafo.style.backgroundColor = "";
+
+            clics = 0;
+            contadorTexto.textContent = "Cantidad de clics: 0";
+        });
+    </script>
+</body>
+</html>
